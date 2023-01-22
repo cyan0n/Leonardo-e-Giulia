@@ -1,26 +1,44 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Button from "../components/Button.astro";
 import Slide from "../components/Slide.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main class="snap-y h-screen overflow-y-scroll snap-mandatory">
-    <Slide class="bg-red-500">
+    <Slide class="bg-lime-print">
       <img src="./images/logo.png" alt="Giulia e Leonardo" />
-      <p class="font-sans text-2xl">
+      <p class="font-sans text-2xl text-white">
         vi invitano al <span class="font-bold">LORO MATRIMONIO</span><br />
         il 29 aprile 2023 alle ore 16:00<br />
         presso l'auditorium <span class="font-bold">BERRETTA ROSSA</span><br />
         Via Giuseppe Bocci, 37 - Soci
       </p>
-      <p class="font-sans text-2xl">Seguirà un brindisi</p>
-      <div class="flex w-full justify-between">
-        <img src="./images/giulia.png" alt="Giulia" />
-        <img src="./images/leonardo.png" alt="Leonardo" />
+
+      <div class="fixed bottom-0 w-full">
+        <div class="flex w-full justify-between">
+          <img src="./images/giulia.png" alt="Giulia" />
+          <img src="./images/leonardo.png" alt="Leonardo" />
+        </div>
       </div>
+      <p class="font-sans text-2xl text-red-print">Seguirà un brindisi</p>
     </Slide>
-    <Slide class="bg-blue-500 font-sans text-3xl">World</Slide>
+
+    <Slide class="bg-blue-print font-sans text-3xl text-white">Page 2</Slide>
+
+    <Slide class="bg-orange-print font-sans text-3xl text-white">
+      <p>
+        Dopo il brindisi gli sposi vi aspettano dalle ore 18:30<br />
+        a "La Colombaia" - Via del Cedro, loc. Villa Bocci, Soci<br />
+        Si prega gentile conferma.
+      </p>
+    </Slide>
+
+    <Slide class="bg-dark-green-print font-sans text-3xl">
+      <p class="text-white">
+        La vostra presenza sarà per noi il dono più bello.<br />
+        Ma se desiderate farci un regalo,<br />
+        potete aiutarci a realizzare il nostro sogno...
+      </p>
+    </Slide>
   </main>
 </Layout>

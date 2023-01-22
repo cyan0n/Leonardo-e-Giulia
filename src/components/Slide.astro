@@ -9,5 +9,9 @@ const { class: className } = Astro.props;
 <div
   class={`${className} w-full h-screen snap-start snap-mandatory flex flex-col justify-center items-center`}
 >
-  <slot />
+  <div
+    class="w-full max-w-4xl h-screen flex flex-col justify-center items-center"
+  >
+    <slot />
+  </div>
 </div>

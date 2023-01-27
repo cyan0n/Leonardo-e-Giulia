@@ -3,42 +3,119 @@ import Layout from "../layouts/Layout.astro";
 import Slide from "../components/Slide.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Giulia e Leonardo">
   <main class="snap-y h-screen overflow-y-scroll snap-mandatory">
-    <Slide class="bg-lime-print">
-      <img src="./images/logo.png" alt="Giulia e Leonardo" />
-      <p class="font-sans text-2xl text-white">
-        vi invitano al <span class="font-bold">LORO MATRIMONIO</span><br />
-        il 29 aprile 2023 alle ore 16:00<br />
-        presso l'auditorium <span class="font-bold">BERRETTA ROSSA</span><br />
-        Via Giuseppe Bocci, 37 - Soci
-      </p>
+    <Slide class="bg-orange-print" topClass="bg-lime-print" id="1">
+      <div class="h-1/2 flex justify-center items-center text-center">
+        <div>
+          <img
+            src="./images/logo.png"
+            alt="Giulia e Leonardo"
+            class="pt-12 drop-shadow-lg"
+          />
+          <p
+            class="font-sans mt-10 text-4xl text-white text-center text-shadow"
+          >
+            Vi aspettiamo al<br /><span class="font-bold uppercase"
+              >nostro matrimonio</span
+            >
+          </p>
+        </div>
+      </div>
+      <div>
+        <p class="font-sans mt-10 text-3xl text-white text-center text-shadow">
+          Sabato 29 Aprile 2023<br />alle ore 16:00<br />
+        </p>
+      </div>
 
-      <div class="fixed bottom-0 w-full">
-        <div class="flex w-full justify-between">
+      <div
+        class="fixed bottom-0 w-full h-48 flex justify-between pointer-events-none"
+      >
+        <img src="./images/giulia.png" alt="Giulia" />
+        <img src="./images/leonardo.png" alt="Leonardo" />
+      </div>
+    </Slide>
+
+    <Slide
+      class="bg-sky-print font-sans relative z-10"
+      topClass="bg-pink-print"
+      id="2"
+    >
+      <div class="h-1/2 flex justify-center items-center text-center">
+        <p class="text-white text-2xl text-shadow">
+          Presso l'<span class="font-bold uppercase"
+            >auditorium BERRETTA ROSSA</span
+          ><br />
+          Via Giuseppe Bocci 37 <br />
+          Soci, Bibbiena (AR)
+        </p>
+      </div>
+      <div class="h-1/2 pt-3 w-full">
+        <iframe
+          class="overflow-hidden w-full h-full"
+          src="https://maps.google.com/maps?q=Berretta%20Rossa,%20Soci&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        ></iframe>
+      </div>
+    </Slide>
+
+    <Slide class="bg-red-print relative" topClass="bg-dark-green-print" id="3">
+      <div class="h-1/2 flex justify-center items-center text-center">
+        <div>
+          <p
+            class="font-sans mt-10 text-4xl text-white text-center text-shadow"
+          >
+            Dopo il brindisi vi invitiamo a festeggiare con noi<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <p class="font-sans mt-10 text-3xl text-white text-center text-shadow">
+          dalle ore 18:30<br />
+        </p>
+      </div>
+
+      <div
+        class="fixed bottom-0 w-full h-48 flex justify-between pointer-events-none"
+      >
+        <img src="./images/giulia.png" alt="Giulia" />
+        <img src="./images/leonardo.png" alt="Leonardo" />
+      </div>
+    </Slide>
+
+    <Slide
+      class="bg-pink-print font-sans text-3xl text-white"
+      topClass="bg-sky-print"
+      id="3"
+    >
+      <div class="h-1/2 flex justify-center items-center text-center">
+        <p class="text-white text-2xl text-shadow">
+          Presso <span class="font-bold uppercase">"La Colombaia"</span><br />
+          Via del Cedro, loc. Villa Bocci, Soci<br /> Bibbiena (AR)<br />
+        </p>
+      </div>
+      <div class="h-1/2 pt-3 w-full">
+        <iframe
+          class="overflow-hidden w-full h-full"
+          src="https://maps.google.com/maps?q=la%20colobaia%20soci&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        ></iframe>
+      </div>
+    </Slide>
+
+    <Slide class="bg-lime-print font-sans text-3xl" topClass="bg-orange-print">
+      <div class="h-1/2 flex justify-center items-center text-center">
+        <p class="text-white text-3xl text-shadow">
+          La vostra presenza sarà per noi il regalo più bello.<br />
+          Ma se desiderate farci un pensiero<br />
+        </p>
+      </div>
+      <div class="h-1/2 pt-3 w-screen relative">
+        <div
+          class="absolute bottom-0 -mb-5 w-full h-48 flex justify-between pointer-events-none"
+        >
           <img src="./images/giulia.png" alt="Giulia" />
           <img src="./images/leonardo.png" alt="Leonardo" />
         </div>
       </div>
-      <p class="font-sans text-2xl text-red-print">Seguirà un brindisi</p>
-    </Slide>
-
-    <Slide class="bg-blue-print font-sans text-3xl text-white">Page 2</Slide>
-
-    <Slide class="bg-orange-print font-sans text-3xl text-white">
-      <p>
-        Dopo il brindisi gli sposi vi aspettano dalle ore 18:30<br />
-        a "La Colombaia" - Via del Cedro, loc. Villa Bocci, Soci<br />
-        Si prega gentile conferma.
-      </p>
-    </Slide>
-
-    <Slide class="bg-dark-green-print font-sans text-3xl">
-      <p class="text-white">
-        La vostra presenza sarà per noi il dono più bello.<br />
-        Ma se desiderate farci un regalo,<br />
-        potete aiutarci a realizzare il nostro sogno...
-      </p>
     </Slide>
   </main>
 </Layout>

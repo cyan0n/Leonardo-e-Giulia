@@ -13,22 +13,22 @@ module.exports = {
           print: "#2d9d4c",
         },
         "dark-green": {
-          print: "#1f683a",
+          print: "#0d6b3e",
         },
         lime: {
-          print: "#b3dc18",
+          print: "#bed630",
         },
         orange: {
-          print: "#fbc108",
+          print: "#fec50d",
         },
         pink: {
-          print: "#ef2891",
+          print: "#f171ab",
         },
         red: {
-          print: "#ee2332",
+          print: "#ee2e33",
         },
         sky: {
-          print: "#6bd0f6",
+          print: "#6bcff6",
         },
         yellow: {
           print: "#eeef2a",

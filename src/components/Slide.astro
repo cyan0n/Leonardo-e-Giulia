@@ -1,16 +1,20 @@
 ---
 interface Props {
   class: string;
+  topClass?: string;
+  id?: string;
 }
 
-const { class: className } = Astro.props;
+const { class: className, topClass, id } = Astro.props;
 ---
 
 <div
-  class={`${className} w-full h-screen snap-start snap-mandatory flex flex-col justify-center items-center`}
+  class={`${className} w-full h-screen relative snap-start snap-mandatory flex flex-col justify-center items-center`}
+  id={id}
 >
+  <div class={`${topClass} w-full absolute top-0 h-1/2`}></div>
   <div
-    class="w-full max-w-4xl h-screen flex flex-col justify-center items-center"
+    class="w-full max-w-4xl h-screen relative flex flex-col py-5 px-5 items-center"
   >
     <slot />
   </div>

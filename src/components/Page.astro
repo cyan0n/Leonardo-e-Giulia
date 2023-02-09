@@ -1,0 +1,16 @@
+---
+interface Props {
+  class?: string;
+  id?: string;
+}
+
+const { class: className = "", id } = Astro.props;
+---
+
+<div
+  id={id}
+  class={`${className} w-full overflow-hidden h-screen snap-start flex flex-col justify-center items-center`}
+>
+  <slot name="top" />
+  <slot name="bottom" />
+</div>

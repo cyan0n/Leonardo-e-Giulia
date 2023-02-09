@@ -1,121 +1,101 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Slide from "../components/Slide.astro";
+import Page from "../components/Page.astro";
+import Half from "../components/Half.astro";
 ---
 
 <Layout title="Giulia e Leonardo">
-  <main class="snap-y h-screen overflow-y-scroll snap-mandatory">
-    <Slide class="bg-orange-print" topClass="bg-lime-print" id="1">
-      <div class="h-1/2 flex justify-center items-center text-center">
-        <div>
-          <img
-            src="./images/logo.png"
-            alt="Giulia e Leonardo"
-            class="pt-12 drop-shadow-lg"
-          />
-          <p
-            class="font-sans mt-10 text-4xl text-white text-center text-shadow"
+  <main
+    class="snap-y h-screen overflow-y-scroll text-shadow font-sans snap-mandatory text-white"
+  >
+    <Page id="1">
+      <Half slot="top" class="bg-lime-print px-5 flex-col">
+        <img
+          src="./images/logo.png"
+          alt="Giulia e Leonardo"
+          class="pt-12 drop-shadow-lg"
+        />
+        <p class="mt-10 text-center">
+          Vi aspettiamo al<br /><span class="font-bold uppercase"
+            >nostro matrimonio</span
           >
-            Vi aspettiamo al<br /><span class="font-bold uppercase"
-              >nostro matrimonio</span
-            >
-          </p>
-        </div>
-      </div>
-      <div>
-        <p class="font-sans mt-10 text-3xl text-white text-center text-shadow">
+        </p>
+      </Half>
+      <Half slot="bottom" class="bg-orange-print relative">
+        <p class="font-sans -mt-32 text-3xl text-white text-center text-shadow">
           Sabato 29 Aprile 2023<br />alle ore 16:00<br />
         </p>
-      </div>
+        <div class="absolute w-full h-52 flex justify-between bottom-0">
+          <img src="./images/giulia.png" alt="Giulia" />
+          <img src="./images/leonardo.png" alt="Leonardo" />
+        </div>
+      </Half>
+    </Page>
 
-      <div
-        class="fixed bottom-0 w-full h-48 flex justify-between pointer-events-none"
-      >
-        <img src="./images/giulia.png" alt="Giulia" />
-        <img src="./images/leonardo.png" alt="Leonardo" />
-      </div>
-    </Slide>
-
-    <Slide
-      class="bg-sky-print font-sans relative z-10"
-      topClass="bg-pink-print"
-      id="2"
-    >
-      <div class="h-1/2 flex justify-center items-center text-center">
-        <p class="text-white text-2xl text-shadow">
+    <Page id="2">
+      <Half slot="top" class="bg-pink-print px-5 flex-col">
+        <p class="text-2xl text-center">
           Presso l'<span class="font-bold uppercase"
             >auditorium BERRETTA ROSSA</span
           ><br />
           Via Giuseppe Bocci 37 <br />
           Soci, Bibbiena (AR)
         </p>
-      </div>
-      <div class="h-1/2 pt-3 w-full">
+      </Half>
+      <Half slot="bottom" class="bg-sky-print relative">
         <iframe
           class="overflow-hidden w-full h-full"
           src="https://maps.google.com/maps?q=Berretta%20Rossa,%20Soci&t=&z=15&ie=UTF8&iwloc=&output=embed"
         ></iframe>
-      </div>
-    </Slide>
+      </Half>
+    </Page>
 
-    <Slide class="bg-red-print relative" topClass="bg-dark-green-print" id="3">
-      <div class="h-1/2 flex justify-center items-center text-center">
-        <div>
-          <p
-            class="font-sans mt-10 text-4xl text-white text-center text-shadow"
-          >
-            Dopo il brindisi vi invitiamo a festeggiare con noi<br />
-          </p>
-        </div>
-      </div>
-      <div>
-        <p class="font-sans mt-10 text-3xl text-white text-center text-shadow">
+    <Page id="3">
+      <Half slot="top" class="bg-dark-green-print px-5 flex-col">
+        <p class="text-4xl text-center">
+          Dopo il brindisi vi invitiamo a festeggiare con noi<br />
+        </p>
+      </Half>
+      <Half slot="bottom" class="bg-red-print relative">
+        <p class="text-3xl -mt-32 text-center">
           dalle ore 18:30<br />
         </p>
-      </div>
+        <div class="absolute w-full h-52 flex justify-between bottom-0">
+          <img src="./images/giulia.png" alt="Giulia" />
+          <img src="./images/leonardo.png" alt="Leonardo" />
+        </div>
+      </Half>
+    </Page>
 
-      <div
-        class="fixed bottom-0 w-full h-48 flex justify-between pointer-events-none"
-      >
-        <img src="./images/giulia.png" alt="Giulia" />
-        <img src="./images/leonardo.png" alt="Leonardo" />
-      </div>
-    </Slide>
-
-    <Slide
-      class="bg-pink-print font-sans text-3xl text-white"
-      topClass="bg-sky-print"
-      id="3"
-    >
-      <div class="h-1/2 flex justify-center items-center text-center">
-        <p class="text-white text-2xl text-shadow">
+    <Page id="4">
+      <Half slot="top" class="bg-sky-print px-5 flex-col">
+        <p class="text-2xl text-center">
           Presso <span class="font-bold uppercase">"La Colombaia"</span><br />
           Via del Cedro, loc. Villa Bocci, Soci<br /> Bibbiena (AR)<br />
         </p>
-      </div>
-      <div class="h-1/2 pt-3 w-full">
+      </Half>
+      <Half slot="bottom" class="bg-pink-print relative">
         <iframe
           class="overflow-hidden w-full h-full"
           src="https://maps.google.com/maps?q=la%20colobaia%20soci&t=&z=13&ie=UTF8&iwloc=&output=embed"
         ></iframe>
-      </div>
-    </Slide>
+      </Half>
+    </Page>
 
-    <Slide class="bg-lime-print font-sans text-3xl" topClass="bg-orange-print">
-      <div class="h-1/2 flex justify-center items-center text-center">
-        <p class="text-white text-3xl text-shadow">
+    <Page id="5">
+      <Half slot="top" class="bg-orange-print px-5 flex-col">
+        <p class="text-3xl text-center">
           La vostra presenza sarà per noi il regalo più bello.<br />
           Ma se desiderate farci un pensiero<br />
         </p>
-      </div>
-      <div class="h-1/2 pt-3 w-screen relative">
-        <div
-          class="absolute bottom-0 -mb-5 w-full h-48 flex justify-between pointer-events-none"
-        >
+      </Half>
+      <Half slot="bottom" class="bg-lime-print relative">
+        <div class="absolute w-full h-52 flex justify-between bottom-0">
           <img src="./images/giulia.png" alt="Giulia" />
           <img src="./images/leonardo.png" alt="Leonardo" />
         </div>
-      </div>
-    </Slide>
+      </Half>
+    </Page>
   </main>
 </Layout>
